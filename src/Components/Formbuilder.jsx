@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
 export default function Formbuilder() {
   return (
@@ -42,4 +43,11 @@ export default function Formbuilder() {
       </button>
     </form>
   );
+  
 }
+Formbuilder.prototype = {
+ name : PropTypes.string.isRequired , 
+ type : PropTypes.oneOf(['text' , 'password' ,  'number' , 'Email']),
+ placeHolder : PropTypes.string
+ }
+ 
