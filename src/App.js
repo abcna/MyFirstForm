@@ -4,19 +4,40 @@ import Formbuilder from "./Components/Formbuilder";
 const inputs = [
   {
     name: 'firstname',
-    type : 'input' , 
-    placeHolder : 'Enter your firstname',
-    help : 'first name' , 
+    type : 'text' , 
+    placeholder : 'Enter your firstname',
+    label: 'first Name',
+    help : 'u should fill a uniqe name' 
+     
   },
   {
     name: 'lastname',
-    type : 'input' , 
-    placeHolder : 'Enter your lastname',
+    type : 'text' , 
+    placeholder : 'Enter your lastname',
+    label: 'Last Name'
   },
   {
     name: 'age',
-    type : 'input' , 
-    placeHolder : 'Enter your age',
+    type : 'number' , 
+    placeholder : 'Enter your age',
+    label: 'Age'
+  },
+  {
+    name: 'phoneNumber',
+    type : 'number' , 
+    placeholder : 'Enter your phone Number',
+    label: 'phone-Number'
+  },
+  {
+    name: 'Email',
+    type : 'Email' , 
+    placeholder : 'Enter your Email Addres',
+    label: 'Email'
+  },
+  {
+    name: 'I used covid vax' ,
+    type: 'checkbox' , 
+    label: 'covid'
   }
 ]
 
