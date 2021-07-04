@@ -18,7 +18,8 @@ const inputs = [
   },
   {
     name: 'age',
-    type : 'number' , 
+    type : 'text' , 
+    defaultValue: 'yy/mm/dd' ,
     placeholder : 'Enter your age',
     label: 'Age'
   },

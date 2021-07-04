@@ -1,17 +1,14 @@
 import React from "react";
-import { useState } from "react";
-export default function Inputs({ inputs }) {
+export default function Inputs({ inputs, value, onChange }) {
   const { name, label, type, placeholder, help } = inputs;
-  const [state, setstate] = useState("");
-  function hanldeChange(e) { setstate(e.target.value)}
   return (
     <div className="mb-3">
       <label htmlFor={label} className="form-label">
         {label}
       </label>
       <input
-      onChange={hanldeChange}
-        value={state}
+        onChange={onChange}
+        value={value}
         name={name}
         type={type}
         placeholder={placeholder}

@@ -2,13 +2,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import Inputs from "./Inputs";
 import Toggles from "./Toggles";
+import { useState } from "react";
 export default function Formbuilder( {inputs} ) {
+
+  const [dataValue, setDataValue] = useState(initialState)
+
+  function initialState () {
+    const initialValue = {} ;
+    inputs.forEach((input)=>{
+      initialValue[input.name]= input.defaultValue || ''
+    })
+    return initialValue
+  }
+
+  function handleChange (e){
+    setDataValue({...dataValue , [e.target.name] : e.target.value})}
+
   return (
     <form>
       {inputs.map((input) => {
         switch (input.type) {
           case "text": {
-            return <Inputs inputs={input} />;
+            return <Inputs onChange={handleChange} value={dataValue[input.name]} inputs={input} />;
             
           } 
           case "number": {
