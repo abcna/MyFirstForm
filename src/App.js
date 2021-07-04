@@ -41,13 +41,16 @@ const inputs = [
     label: 'covid'
   }
 ]
+function onSubmit (values){
+ console.log(values)
+}
 
 function App() {
   return (
     <div className="container" style={{ marginTop: 30 }}>
       <div className="row justify-content-center">
         <div className="col-4">
-          <Formbuilder inputs={inputs} />
+          <Formbuilder onSubmit={onSubmit} inputs={inputs} />
         </div>
       </div>
     </div>
